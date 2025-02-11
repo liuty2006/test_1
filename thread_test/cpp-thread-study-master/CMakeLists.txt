@@ -26,7 +26,8 @@ if(WIN32)
 endif()
 
 # C++ standard requirements.
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+#set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -56,3 +57,6 @@ endif()
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_subdirectory(src)
+
+# Link Threads library
+#target_link_libraries(cpp_thread_study PRIVATE Threads::Threads)
