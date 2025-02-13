@@ -1,1 +1,1 @@
-gcc -o main.c -ltcc
+gcc -o main main.c -ltcc -ldl
