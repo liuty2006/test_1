@@ -6,5 +6,8 @@ project(test_3)
 
 set(CMAKE_CXX_STANDARD 11)
 
-link_libraries(pthread)
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+    link_libraries(pthread)
+endif()
+
 add_executable(test_3 main.cpp)
