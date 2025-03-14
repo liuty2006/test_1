@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12)
+project(async)
+add_subdirectory(test_1)
+add_subdirectory(test_2)
+add_subdirectory(test_3)
+add_subdirectory(test_4)
