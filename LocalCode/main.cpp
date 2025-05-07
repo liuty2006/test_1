@@ -18,8 +18,11 @@ std::string Utf8ToGbk(const std::string& utf8Str)
 #endif
 
 int main() {
+    std::locale::global(std::locale("en_US.UTF-8"));
     std::string utf8Str = "南北绿灯亮";
     std::cout << utf8Str << std::endl;  // 在 GBK 终端可能显示正常
+
+    PLOG_ERROR << utf8Str;
 
     //
     //QString strQT = "南北绿灯亮";
