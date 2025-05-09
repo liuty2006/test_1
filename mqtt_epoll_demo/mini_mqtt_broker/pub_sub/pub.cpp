@@ -11,7 +11,8 @@
 #endif
 
 const char *MQTT_BROKER_ADDRESS = "localhost";
-const int MQTT_BROKER_PORT = 1883;
+const int MQTT_BROKER_PORT = 1884;
+//const int MQTT_BROKER_PORT = 1883;
 const char *MQTT_TOPIC = "demo/topic";
 
 struct mosquitto *mosq = NULL;

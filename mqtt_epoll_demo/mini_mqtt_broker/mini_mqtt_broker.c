@@ -9,7 +9,8 @@
 #include <sys/socket.h>
 #include <time.h>
 
-#define PORT 1883
+//#define PORT 1883
+#define PORT 1884
 #define MAX_EVENTS 64
 #define BUF_SIZE 1024
 #define MAX_CLIENTS 128
