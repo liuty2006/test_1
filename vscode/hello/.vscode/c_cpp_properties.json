@@ -1,32 +1,52 @@
 {
+    "version": 4,
     "configurations": [
         {
-            "name": "Windows",
-            "includePath": [
-                "${workspaceFolder}/**"
+            "name": "Debug C++ on Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "windowsSdkVersion": "10.0.19041.0",
-            "compilerPath": "cl.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "preLaunchTask": "C/C++: Build active file (Cross-platform)",
+            "miDebuggerPath": "/usr/bin/gdb"
         },
         {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/g++",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "name": "Debug C++ on Windows",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "C/C++: Build active file (Cross-platform)"
+        },
+        {
+            "name": "Debug C++ on macOS",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: Build active file (Cross-platform)",
+            "miDebuggerPath": "/usr/bin/lldb"
         }
-    ],
-    "version": 4
+    ]
 }
